@@ -1,0 +1,476 @@
+openapi: 3.0.3
+info:
+  title: Title
+  description: Title
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /tauxTaxeSejourAnnuels:
+    get:
+      summary: List all tauxTaxeSejourAnnuels
+      operationId: listTauxTaxeSejourAnnuels
+      tags:
+        - tauxTaxeSejourAnnuels
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of tauxTaxeSejourAnnuels
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/TauxTaxeSejourAnnuels'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a tauxTaxeSejourAnnuel
+      operationId: createTauxTaxeSejourAnnuels
+      tags:
+        - tauxTaxeSejourAnnuels
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /tauxTaxeSejourAnnuels/{tauxTaxeSejourAnnuelId}:
+    get:
+      summary: Info for a specific tauxTaxeSejourAnnuel
+      operationId: showTauxTaxeSejourAnnuelById
+      tags:
+        - tauxTaxeSejourAnnuels
+      parameters:
+        - name: tauxTaxeSejourAnnuelId
+          in: path
+          required: true
+          description: The id of the tauxTaxeSejourAnnuel to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/TauxTaxeSejourAnnuels'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /taxeSejourAnnuels:
+    get:
+      summary: List all taxeSejourAnnuels
+      operationId: listTaxeSejourAnnuels
+      tags:
+        - taxeSejourAnnuels
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of taxeSejourAnnuels
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/TaxeSejourAnnuels'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a taxeSejourAnnuel
+      operationId: createTaxeSejourAnnuels
+      tags:
+        - taxeSejourAnnuels
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /taxeSejourAnnuels/{taxeSejourAnnuelId}:
+    get:
+      summary: Info for a specific taxeSejourAnnuel
+      operationId: showTaxeSejourAnnuelById
+      tags:
+        - taxeSejourAnnuels
+      parameters:
+        - name: taxeSejourAnnuelId
+          in: path
+          required: true
+          description: The id of the taxeSejourAnnuel to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/TaxeSejourAnnuels'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /tauxTaxeSejourTrims:
+    get:
+      summary: List all tauxTaxeSejourTrims
+      operationId: listTauxTaxeSejourTrims
+      tags:
+        - tauxTaxeSejourTrims
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of tauxTaxeSejourTrims
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/TauxTaxeSejourTrims'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a tauxTaxeSejourTrim
+      operationId: createTauxTaxeSejourTrims
+      tags:
+        - tauxTaxeSejourTrims
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /tauxTaxeSejourTrims/{tauxTaxeSejourTrimId}:
+    get:
+      summary: Info for a specific tauxTaxeSejourTrim
+      operationId: showTauxTaxeSejourTrimById
+      tags:
+        - tauxTaxeSejourTrims
+      parameters:
+        - name: tauxTaxeSejourTrimId
+          in: path
+          required: true
+          description: The id of the tauxTaxeSejourTrim to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/TauxTaxeSejourTrims'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /taxeSejourAnnuelDetails:
+    get:
+      summary: List all taxeSejourAnnuelDetails
+      operationId: listTaxeSejourAnnuelDetails
+      tags:
+        - taxeSejourAnnuelDetails
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of taxeSejourAnnuelDetails
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/TaxeSejourAnnuelDetails'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a taxeSejourAnnuelDetail
+      operationId: createTaxeSejourAnnuelDetails
+      tags:
+        - taxeSejourAnnuelDetails
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /taxeSejourAnnuelDetails/{taxeSejourAnnuelDetailId}:
+    get:
+      summary: Info for a specific taxeSejourAnnuelDetail
+      operationId: showTaxeSejourAnnuelDetailById
+      tags:
+        - taxeSejourAnnuelDetails
+      parameters:
+        - name: taxeSejourAnnuelDetailId
+          in: path
+          required: true
+          description: The id of the taxeSejourAnnuelDetail to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/TaxeSejourAnnuelDetails'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /taxeSejourTrims:
+    get:
+      summary: List all taxeSejourTrims
+      operationId: listTaxeSejourTrims
+      tags:
+        - taxeSejourTrims
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of taxeSejourTrims
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/TaxeSejourTrims'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a taxeSejourTrim
+      operationId: createTaxeSejourTrims
+      tags:
+        - taxeSejourTrims
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /taxeSejourTrims/{taxeSejourTrimId}:
+    get:
+      summary: Info for a specific taxeSejourTrim
+      operationId: showTaxeSejourTrimById
+      tags:
+        - taxeSejourTrims
+      parameters:
+        - name: taxeSejourTrimId
+          in: path
+          required: true
+          description: The id of the taxeSejourTrim to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/TaxeSejourTrims'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  
+
+
+definitions:
+  TauxTaxeSejourAnnuel:
+    type: "object"
+    required:
+      - id
+      - categorieSejourCode
+      - montantNuit
+      - pourcentagePremierMoisRetard
+      - pourcentageAutreMoisRetard
+      - employe
+    properties:
+      id:
+        type: int
+      categorieSejourCode:
+        type: string
+      montantNuit:
+        type: number
+      pourcentagePremierMoisRetard:
+        type: number
+      pourcentageAutreMoisRetard:
+        type: number
+      employe:
+        type: string
+  TauxTaxeSejourAnnuels:
+    type: array
+    items:
+      $ref: '#/definitions/TauxTaxeSejourAnnuel'
+  TaxeSejourAnnuel:
+    type: "object"
+    required:
+      - id
+      - code
+      - montantBase
+      - annee
+      - etatTaxeSejour
+      - montantTotal
+      - montantRetard
+      - nbrMoisRetard
+      - employe
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      montantBase:
+        type: number
+      annee:
+        type: int
+      etatTaxeSejour:
+        type: string
+      montantTotal:
+        type: number
+      montantRetard:
+        type: number
+      nbrMoisRetard:
+        type: number
+      employe:
+        type: string
+  TaxeSejourAnnuels:
+    type: array
+    items:
+      $ref: '#/definitions/TaxeSejourAnnuel'
+  TauxTaxeSejourTrim:
+    type: "object"
+    required:
+      - id
+      - categorieSejourCode
+      - montantNuit
+      - pourcentagePremierMoisRetard
+      - pourcentageAutreMoisRetard
+      - employe
+    properties:
+      id:
+        type: int
+      categorieSejourCode:
+        type: string
+      montantNuit:
+        type: number
+      pourcentagePremierMoisRetard:
+        type: number
+      pourcentageAutreMoisRetard:
+        type: number
+      employe:
+        type: string
+  TauxTaxeSejourTrims:
+    type: array
+    items:
+      $ref: '#/definitions/TauxTaxeSejourTrim'
+  TaxeSejourAnnuelDetail:
+    type: "object"
+    required:
+      - id
+      - nbrNuit
+      - trim
+      - annee
+    properties:
+      id:
+        type: int
+      nbrNuit:
+        type: number
+      trim:
+        type: number
+      annee:
+        type: number
+  TaxeSejourAnnuelDetails:
+    type: array
+    items:
+      $ref: '#/definitions/TaxeSejourAnnuelDetail'
+  TaxeSejourTrim:
+    type: "object"
+    required:
+      - id
+      - locale
+      - redevable
+      - nbrNuit
+      - code
+      - trim
+      - annee
+      - montantBase
+      - nbrMoisRetard
+      - montantRetard
+      - montantPremierMoisRetard
+      - montantAutreMoisRetard
+      - montantTotal
+      - employe
+    properties:
+      id:
+        type: int
+      locale:
+        type: string
+      redevable:
+        type: string
+      nbrNuit:
+        type: number
+      code:
+        type: string
+      trim:
+        type: number
+      annee:
+        type: number
+      montantBase:
+        type: number
+      nbrMoisRetard:
+        type: int
+      montantRetard:
+        type: number
+      montantPremierMoisRetard:
+        type: number
+      montantAutreMoisRetard:
+        type: number
+      montantTotal:
+        type: number
+      employe:
+        type: string
+  TaxeSejourTrims:
+    type: array
+    items:
+      $ref: '#/definitions/TaxeSejourTrim'
+
+  Error:
+    type: "object"
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string

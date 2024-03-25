@@ -1,0 +1,75 @@
+<!-- db/changelog-1.1-container.xml -->
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+  <!-- Create Container Table -->
+    <changeSet id="1" author="your-name">
+    <createTable tableName="taxe_sejour_trim">
+      <column name="id" type="BIGINT">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+        <column name="locale" type="VARCHAR(500)"/>
+        <column name="redevable" type="VARCHAR(500)"/>
+        <column name="nbr_nuit" type="NUMERIC"/>
+        <column name="code" type="VARCHAR(500)"/>
+        <column name="trim" type="NUMERIC"/>
+        <column name="annee" type="NUMERIC"/>
+        <column name="montant_base" type="NUMERIC"/>
+        <column name="nbr_mois_retard" type="BIGINT"/>
+        <column name="montant_retard" type="NUMERIC"/>
+        <column name="montant_premier_mois_retard" type="NUMERIC"/>
+        <column name="montant_autre_mois_retard" type="NUMERIC"/>
+        <column name="montant_total" type="NUMERIC"/>
+        <column name="employe" type="VARCHAR(500)"/>
+
+        <column name="taux_taxe_sejour_trim_id" type="BIGINT">
+          <constraints nullable="false"/>
+        </column>
+
+    </createTable>
+  </changeSet>
+
+    <!-- Add foreign key constraint -->
+  <changeSet id="2" author="your-name">
+      <addForeignKeyConstraint
+              baseTableName="taxe_sejour_trim"
+              baseColumnNames="taux_taxe_sejour_trim_id"
+              referencedTableName="taux_taxe_sejour_trim"
+              referencedColumnNames="id"
+              constraintName="fk_taxe_sejour_trim_taux_taxe_sejour_trim"/>
+
+  </changeSet>
+
+    <!-- Create Sequence for ContainerType -->
+  <changeSet id="3" author="your-name">
+    <createSequence sequenceName="taxe_sejour_trim_seq" startValue="1" incrementBy="1"/>
+  </changeSet>
+
+  <!-- Load Data from CSV -->
+  <changeSet id="4" author="your-name">
+    <loadData
+            file="classpath:/db/migration/data/Taxe/TaxeSejourTrim.csv"
+            tableName="taxe_sejour_trim">
+      <column name="id" type="NUMERIC"/>
+          <column name="locale" type="STRING"/>
+          <column name="redevable" type="STRING"/>
+          <column name="nbr_nuit" type="NUMERIC"/>
+          <column name="code" type="STRING"/>
+          <column name="trim" type="NUMERIC"/>
+          <column name="annee" type="NUMERIC"/>
+          <column name="montant_base" type="NUMERIC"/>
+          <column name="nbr_mois_retard" type="NUMERIC"/>
+          <column name="montant_retard" type="NUMERIC"/>
+          <column name="montant_premier_mois_retard" type="NUMERIC"/>
+          <column name="montant_autre_mois_retard" type="NUMERIC"/>
+          <column name="montant_total" type="NUMERIC"/>
+          <column name="employe" type="STRING"/>
+        <column name="taux_taxe_sejour_trim" type="BIGINT"/>
+    </loadData>
+  </changeSet>
+
+
+</databaseChangeLog>

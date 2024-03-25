@@ -1,0 +1,15 @@
+{
+    "nbrNuit": "#number",
+    "trim": "#number",
+    "annee": "#number",
+    "taxeSejourAnnuel": {"id": "#number"}
+
+}
+
+
+
+
+
+
+
+

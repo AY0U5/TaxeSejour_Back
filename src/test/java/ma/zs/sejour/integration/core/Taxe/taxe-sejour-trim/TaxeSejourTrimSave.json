@@ -1,0 +1,25 @@
+{
+    "locale": "locale-1",
+    "redevable": "redevable-1",
+    "tauxTaxeSejourTrim": {"id": "1"},
+    "nbrNuit": "10",
+    "code": "code-1",
+    "trim": "10",
+    "annee": "10",
+    "montantBase": "10",
+    "nbrMoisRetard": "10",
+    "montantRetard": "10",
+    "montantPremierMoisRetard": "10",
+    "montantAutreMoisRetard": "10",
+    "montantTotal": "10",
+    "employe": "employe-1"
+
+}
+
+
+
+
+
+
+
+

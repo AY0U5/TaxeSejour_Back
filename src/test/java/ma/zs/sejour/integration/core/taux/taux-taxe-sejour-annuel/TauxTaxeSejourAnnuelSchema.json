@@ -1,0 +1,16 @@
+{
+    "categorieSejourCode": "#string",
+    "montantNuit": "#number",
+    "pourcentagePremierMoisRetard": "#number",
+    "pourcentageAutreMoisRetard": "#number",
+    "employe": "#string"
+
+}
+
+
+
+
+
+
+
+

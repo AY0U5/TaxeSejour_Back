@@ -1,0 +1,45 @@
+<!-- db/changelog-1.1-container.xml -->
+
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+  <!-- Create Container Table -->
+    <changeSet id="1" author="your-name">
+    <createTable tableName="taux_taxe_sejour_annuel">
+      <column name="id" type="BIGINT">
+        <constraints primaryKey="true" nullable="false"/>
+      </column>
+        <column name="categorie_sejour_code" type="VARCHAR(500)"/>
+        <column name="montant_nuit" type="NUMERIC"/>
+        <column name="pourcentage_premier_mois_retard" type="NUMERIC"/>
+        <column name="pourcentage_autre_mois_retard" type="NUMERIC"/>
+        <column name="employe" type="VARCHAR(500)"/>
+
+
+    </createTable>
+  </changeSet>
+
+
+    <!-- Create Sequence for ContainerType -->
+  <changeSet id="2" author="your-name">
+    <createSequence sequenceName="taux_taxe_sejour_annuel_seq" startValue="1" incrementBy="1"/>
+  </changeSet>
+
+  <!-- Load Data from CSV -->
+  <changeSet id="3" author="your-name">
+    <loadData
+            file="classpath:/db/migration/data/taux/TauxTaxeSejourAnnuel.csv"
+            tableName="taux_taxe_sejour_annuel">
+      <column name="id" type="NUMERIC"/>
+          <column name="categorie_sejour_code" type="STRING"/>
+          <column name="montant_nuit" type="NUMERIC"/>
+          <column name="pourcentage_premier_mois_retard" type="NUMERIC"/>
+          <column name="pourcentage_autre_mois_retard" type="NUMERIC"/>
+          <column name="employe" type="STRING"/>
+    </loadData>
+  </changeSet>
+
+
+</databaseChangeLog>

@@ -1,0 +1,20 @@
+{
+    "tauxTaxeSejourAnnuel": {"id": "#number"},
+    "code": "#string",
+    "montantBase": "#number",
+    "annee": "#number",
+    "etatTaxeSejour": "#string",
+    "montantTotal": "#number",
+    "montantRetard": "#number",
+    "nbrMoisRetard": "#number",
+    "employe": "#string"
+
+}
+
+
+
+
+
+
+
+
