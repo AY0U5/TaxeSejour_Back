@@ -18,13 +18,12 @@ public class Locale extends AuditBusinessObject {
     private String code;
     @Column(length = 500)
     private String libelle;
-    @ManyToOne
-    private Rue rue;
-
-    @ManyToOne
-    private  CategorieSejour categorieSejour ;
-    @ManyToOne
-    private Redevable redevable;
+    @Column(length = 500)
+    private String rueCode;
+    @Column(length = 500)
+    private  String categorieSejourCode ;
+    @Column(length = 500)
+    private String redevableCode;
 
 
     @Id
@@ -56,28 +55,28 @@ public class Locale extends AuditBusinessObject {
         this.libelle = libelle;
     }
 
-    public Rue getRue() {
-        return rue;
+    public String getRue() {
+        return rueCode;
     }
 
-    public void setRue(Rue rue) {
-        this.rue = rue;
+    public void setRue(String rueCode) {
+        this.rueCode = rueCode;
     }
 
-    public CategorieSejour getCategorieSejour() {
-        return categorieSejour;
+    public String  getCategorieSejour() {
+        return categorieSejourCode;
     }
 
-    public void setCategorieSejour(CategorieSejour categorieSejour) {
-        this.categorieSejour = categorieSejour;
+    public void setCategorieSejour(String categorieSejourCode) {
+        this.categorieSejourCode = categorieSejourCode;
     }
 
-    public Redevable getRedevable() {
-        return redevable;
+    public String getRedevable() {
+        return redevableCode;
     }
 
-    public void setRedevable(Redevable redevable) {
-        this.redevable = redevable;
+    public void setRedevable(String redevableCode) {
+        this.redevableCode = redevableCode;
     }
 
     @Override

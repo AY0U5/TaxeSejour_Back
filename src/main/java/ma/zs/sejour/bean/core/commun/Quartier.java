@@ -19,8 +19,8 @@ public class Quartier extends AuditBusinessObject {
     private String libelle;
     @Column(length = 500)
     private String code;
-    @ManyToOne
-    private Secteur secteur;
+    @Column(length = 500)
+    private String secteurCode;
 
 
     @Id
@@ -52,12 +52,12 @@ public class Quartier extends AuditBusinessObject {
         this.code = code;
     }
 
-    public Secteur getSecteur() {
-        return secteur;
+    public String getSecteur() {
+        return secteurCode;
     }
 
-    public void setSecteur(Secteur secteur) {
-        this.secteur = secteur;
+    public void setSecteur(String sectsecteurCodeeur) {
+        this.secteurCode = secteurCode;
     }
 
     @Override

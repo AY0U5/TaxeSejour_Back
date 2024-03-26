@@ -31,9 +31,19 @@ public class Secteur extends AuditBusinessObject {
     }
 
 
+    public String getVilleCode() {
+        return villeCode;
+    }
+
+    public void setVilleCode(String villeCode) {
+        this.villeCode = villeCode;
+    }
+
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy =  GenerationType.SEQUENCE,generator="secteur_seq")
+
+
 
 
     public String getLibelle() {

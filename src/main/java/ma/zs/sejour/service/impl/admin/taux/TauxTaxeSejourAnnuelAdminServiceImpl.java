@@ -24,17 +24,6 @@ import java.util.List;
 public class TauxTaxeSejourAnnuelAdminServiceImpl extends AbstractServiceImpl<TauxTaxeSejourAnnuel, TauxTaxeSejourAnnuelCriteria, TauxTaxeSejourAnnuelDao> implements TauxTaxeSejourAnnuelAdminService {
 
 
-
-
-
-
-
-
-
-
-
-
-
     public void configure() {
         super.configure(TauxTaxeSejourAnnuel.class, TauxTaxeSejourAnnuelSpecification.class);
     }

@@ -20,8 +20,7 @@ public class Rue extends AuditBusinessObject {
     private String libelle;
     @Column(length = 500)
     private String code;
-    @ManyToOne
-    private Quartier quartier;
+    private String quartierCode;
 
 
     @Id
@@ -29,12 +28,12 @@ public class Rue extends AuditBusinessObject {
     @GeneratedValue(strategy =  GenerationType.SEQUENCE,generator="rue_seq")
 
 
-    public Quartier getQuartier() {
-        return quartier;
+    public String getQuartier() {
+        return quartierCode;
     }
 
-    public void setQuartier(Quartier quartier) {
-        this.quartier = quartier;
+    public void setQuartier(String quartiercode) {
+        this.quartierCode = quartierCode;
     }
 
     public Long getId() {

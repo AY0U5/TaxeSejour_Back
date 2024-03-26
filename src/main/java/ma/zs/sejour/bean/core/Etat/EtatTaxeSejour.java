@@ -19,8 +19,10 @@ public class EtatTaxeSejour extends AuditBusinessObject {
     private String libelle;
     @Column(length = 500)
     private String code;
-    @ManyToOne
-    private Secteur secteur;
+
+    private String secteurCode;
+
+
 
     public Long getId() {
         return id;
@@ -49,11 +51,11 @@ public class EtatTaxeSejour extends AuditBusinessObject {
     public void setCode(String code) {
         this.code = code;
     }
-    public Secteur getSecteur() {
-        return secteur;
+    public String getSecteur() {
+        return secteurCode;
     }
-    public void setSecteur(Secteur secteur) {
-        this.secteur = secteur;
+    public void setSecteur(String secteurCode) {
+        this.secteurCode = secteurCode;
     }
 
 
