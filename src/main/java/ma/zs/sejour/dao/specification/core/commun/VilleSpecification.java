@@ -6,7 +6,6 @@ import ma.zs.sejour.dao.criteria.core.commun.TypeRedevableCriteria;
 import ma.zs.sejour.dao.criteria.core.commun.VilleCriteria;
 import ma.zs.sejour.zynerator.specification.AbstractSpecification;
 
-
 public class VilleSpecification extends  AbstractSpecification<VilleCriteria, Ville>  {
 
     @Override

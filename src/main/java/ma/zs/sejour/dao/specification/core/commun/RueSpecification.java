@@ -5,8 +5,6 @@ import ma.zs.sejour.bean.core.commun.Rue;
 import ma.zs.sejour.dao.criteria.core.commun.RedevableCriteria;
 import ma.zs.sejour.dao.criteria.core.commun.RueCriteria;
 import ma.zs.sejour.zynerator.specification.AbstractSpecification;
-
-
 public class RueSpecification extends  AbstractSpecification<RueCriteria, Rue>  {
 
     @Override

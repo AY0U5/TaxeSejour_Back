@@ -4,8 +4,6 @@ package ma.zs.sejour.dao.specification.core.commun;
 import ma.zs.sejour.bean.core.commun.Employe;
 import ma.zs.sejour.dao.criteria.core.commun.EmployeCriteria;
 import ma.zs.sejour.zynerator.specification.AbstractSpecification;
-
-
 public class EmployeSpecification extends  AbstractSpecification<EmployeCriteria, Employe>  {
 
     @Override

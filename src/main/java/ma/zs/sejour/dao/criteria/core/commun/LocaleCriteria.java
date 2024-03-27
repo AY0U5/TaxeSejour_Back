@@ -5,7 +5,6 @@ import ma.zs.sejour.zynerator.criteria.BaseCriteria;
 
 public class LocaleCriteria extends BaseCriteria {
 
-
     private String code;
     private String codeLike;
 

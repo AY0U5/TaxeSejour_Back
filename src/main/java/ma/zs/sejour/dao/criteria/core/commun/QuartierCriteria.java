@@ -5,7 +5,6 @@ import ma.zs.sejour.zynerator.criteria.BaseCriteria;
 
 public class QuartierCriteria extends BaseCriteria {
 
-
     private String libelle;
     private String libelleLike;
     private String code;

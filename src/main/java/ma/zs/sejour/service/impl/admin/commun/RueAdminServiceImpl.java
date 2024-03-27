@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class RueAdminServiceImpl extends AbstractServiceImpl<Rue, RueCriteria, RueDao> implements RueAdminService {
 
-
     public RueAdminServiceImpl(RueDao dao) {
         super(dao);
     }

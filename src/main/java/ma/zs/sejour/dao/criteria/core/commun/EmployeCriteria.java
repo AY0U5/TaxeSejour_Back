@@ -6,7 +6,6 @@ import ma.zs.sejour.zynerator.criteria.BaseCriteria;
 
 public class EmployeCriteria extends BaseCriteria {
 
-
     private String code;
     private String codeLike;
     private String username;

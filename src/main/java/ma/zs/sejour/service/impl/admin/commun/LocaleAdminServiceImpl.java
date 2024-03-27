@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class LocaleAdminServiceImpl extends AbstractServiceImpl<Locale, LocaleCriteria, LocaleDao> implements LocaleAdminService {
 
-
     public LocaleAdminServiceImpl(LocaleDao dao) {
         super(dao);
     }

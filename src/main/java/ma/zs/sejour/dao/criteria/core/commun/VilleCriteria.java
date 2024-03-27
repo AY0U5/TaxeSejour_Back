@@ -1,7 +1,6 @@
 package ma.zs.sejour.dao.criteria.core.commun;
 
 import ma.zs.sejour.zynerator.criteria.BaseCriteria;
-
 public class VilleCriteria extends BaseCriteria {
 
     private String libelle;

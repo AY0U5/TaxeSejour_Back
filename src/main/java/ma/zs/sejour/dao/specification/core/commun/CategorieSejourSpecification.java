@@ -4,7 +4,6 @@ import ma.zs.sejour.bean.core.commun.CategorieSejour;
 import ma.zs.sejour.dao.criteria.core.commun.CategorieSejourCriteria;
 import ma.zs.sejour.zynerator.specification.AbstractSpecification;
 
-
 public class CategorieSejourSpecification extends  AbstractSpecification<CategorieSejourCriteria, CategorieSejour>  {
 
     @Override

@@ -3,8 +3,6 @@ package ma.zs.sejour.dao.specification.core.commun;
 import ma.zs.sejour.bean.core.commun.Quartier;
 import ma.zs.sejour.dao.criteria.core.commun.QuartierCriteria;
 import ma.zs.sejour.zynerator.specification.AbstractSpecification;
-
-
 public class QuartierSpecification extends  AbstractSpecification<QuartierCriteria, Quartier>  {
 
     @Override

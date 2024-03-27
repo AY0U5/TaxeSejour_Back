@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class QuartierAdminServiceImpl extends AbstractServiceImpl<Quartier, QuartierCriteria, QuartierDao> implements QuartierAdminService {
 
-
     public QuartierAdminServiceImpl(QuartierDao dao) {
         super(dao);
     }

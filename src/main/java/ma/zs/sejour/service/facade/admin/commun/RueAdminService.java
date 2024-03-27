@@ -12,5 +12,4 @@ public interface RueAdminService extends  IService<Rue, RueCriteria>  {
 
 
 
-
 }

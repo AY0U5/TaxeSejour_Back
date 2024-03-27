@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class CategorieSejourAdminServiceImpl extends AbstractServiceImpl<CategorieSejour, CategorieSejourCriteria, CategorieSejourDao> implements CategorieSejourAdminService {
 
-
     public CategorieSejourAdminServiceImpl(CategorieSejourDao dao) {
         super(dao);
     }

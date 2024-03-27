@@ -6,7 +6,6 @@ import ma.zs.sejour.dao.criteria.core.commun.RueCriteria;
 import ma.zs.sejour.dao.criteria.core.commun.SecteurCriteria;
 import ma.zs.sejour.zynerator.specification.AbstractSpecification;
 
-
 public class SecteurSpecification extends  AbstractSpecification<SecteurCriteria, Secteur>  {
 
     @Override

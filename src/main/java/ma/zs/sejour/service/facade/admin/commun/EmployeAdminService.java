@@ -9,6 +9,4 @@ public interface EmployeAdminService extends  IService<Employe, EmployeCriteria>
 
 
 
-
-
 }

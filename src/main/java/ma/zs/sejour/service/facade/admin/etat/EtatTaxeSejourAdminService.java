@@ -9,6 +9,4 @@ public interface EtatTaxeSejourAdminService extends  IService<EtatTaxeSejour, Et
 
 
 
-
-
 }

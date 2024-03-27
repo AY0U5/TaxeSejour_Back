@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class SecteurAdminServiceImpl extends AbstractServiceImpl<Secteur, SecteurCriteria, SecteurDao> implements SecteurAdminService {
 
-
     public SecteurAdminServiceImpl(SecteurDao dao) {
         super(dao);
     }

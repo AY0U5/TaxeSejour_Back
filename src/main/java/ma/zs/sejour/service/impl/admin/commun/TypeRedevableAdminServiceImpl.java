@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class TypeRedevableAdminServiceImpl extends AbstractServiceImpl<TypeRedevable, TypeRedevableCriteria, TypeRedevableDao> implements TypeRedevableAdminService {
 
-
     public TypeRedevableAdminServiceImpl(TypeRedevableDao dao) {
         super(dao);
     }

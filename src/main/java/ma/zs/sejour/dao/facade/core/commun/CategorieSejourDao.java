@@ -5,7 +5,6 @@ import ma.zs.sejour.zynerator.repository.AbstractRepository;
 import org.springframework.stereotype.Repository;
 
 
-
 @Repository
 public interface CategorieSejourDao extends AbstractRepository<CategorieSejour,Long> {
     /*CategorieSejour findByCode(String code);

@@ -3,7 +3,6 @@ package ma.zs.sejour.dao.criteria.core.commun;
 import ma.zs.sejour.zynerator.criteria.BaseCriteria;
 
 public class TypeRedevableCriteria extends BaseCriteria {
-
     private String libelle;
     private String libelleLike;
     private String code;

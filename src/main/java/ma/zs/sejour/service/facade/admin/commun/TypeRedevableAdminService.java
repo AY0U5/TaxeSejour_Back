@@ -10,7 +10,4 @@ import ma.zs.sejour.zynerator.service.IService;
 public interface TypeRedevableAdminService extends  IService<TypeRedevable, TypeRedevableCriteria>  {
 
 
-
-
-
 }

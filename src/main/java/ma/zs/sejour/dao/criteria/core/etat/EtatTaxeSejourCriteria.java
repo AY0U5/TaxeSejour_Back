@@ -3,7 +3,6 @@ package ma.zs.sejour.dao.criteria.core.etat;
 import ma.zs.sejour.zynerator.criteria.BaseCriteria;
 
 public class EtatTaxeSejourCriteria extends BaseCriteria {
-
     private String libelle;
     private String libelleLike;
     private String code;

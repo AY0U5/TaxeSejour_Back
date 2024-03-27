@@ -6,7 +6,6 @@ import ma.zs.sejour.dao.criteria.core.commun.SecteurCriteria;
 import ma.zs.sejour.dao.criteria.core.commun.TypeRedevableCriteria;
 import ma.zs.sejour.zynerator.specification.AbstractSpecification;
 
-
 public class TypeRedevableSpecification extends  AbstractSpecification<TypeRedevableCriteria, TypeRedevable>  {
 
     @Override

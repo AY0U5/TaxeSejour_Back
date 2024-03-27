@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class VilleAdminServiceImpl extends AbstractServiceImpl<Ville, VilleCriteria, VilleDao> implements VilleAdminService {
 
-
     public VilleAdminServiceImpl(VilleDao dao) {
         super(dao);
     }

@@ -10,7 +10,4 @@ import ma.zs.sejour.zynerator.service.IService;
 public interface VilleAdminService extends  IService<Ville, VilleCriteria>  {
 
 
-
-
-
 }

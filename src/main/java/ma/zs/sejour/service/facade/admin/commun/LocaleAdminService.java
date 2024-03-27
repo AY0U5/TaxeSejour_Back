@@ -11,6 +11,4 @@ public interface LocaleAdminService extends  IService<Locale, LocaleCriteria>  {
 
 
 
-
-
 }

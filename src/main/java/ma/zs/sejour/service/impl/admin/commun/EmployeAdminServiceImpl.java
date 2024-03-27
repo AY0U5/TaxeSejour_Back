@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmployeAdminServiceImpl extends AbstractServiceImpl<Employe, EmployeCriteria, EmployeDao> implements EmployeAdminService {
 
-
     public EmployeAdminServiceImpl(EmployeDao dao) {
         super(dao);
     }

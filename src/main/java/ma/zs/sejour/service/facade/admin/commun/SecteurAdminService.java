@@ -11,6 +11,4 @@ public interface SecteurAdminService extends  IService<Secteur, SecteurCriteria>
 
 
 
-
-
 }

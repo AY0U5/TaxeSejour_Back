@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class EtatTaxeSejourAdminServiceImpl extends AbstractServiceImpl<EtatTaxeSejour, EtatTaxeSejourCriteria, EtatTaxeSejourDao> implements EtatTaxeSejourAdminService {
 
-
     public EtatTaxeSejourAdminServiceImpl(EtatTaxeSejourDao dao) {
         super(dao);
     }

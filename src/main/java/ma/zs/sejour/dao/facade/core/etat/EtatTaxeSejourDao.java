@@ -12,7 +12,4 @@ public interface EtatTaxeSejourDao extends AbstractRepository<EtatTaxeSejour,Lon
     int deleteBycode(String code);*/
 
 
-
-
-
 }

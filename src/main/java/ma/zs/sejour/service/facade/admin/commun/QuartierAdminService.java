@@ -11,6 +11,4 @@ public interface QuartierAdminService extends  IService<Quartier, QuartierCriter
 
 
 
-
-
 }
