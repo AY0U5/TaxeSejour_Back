@@ -21,7 +21,6 @@ public class SecteurConverter extends AbstractConverter<Secteur, SecteurDto> {
         bean.setId(dto.getId());
         bean.setCode(dto.getCode());
         bean.setLibelle(dto.getLibelle());
-        bean.setVilleCode(dto.getVilleCode());
         return bean;
     }
 
@@ -31,7 +30,6 @@ public class SecteurConverter extends AbstractConverter<Secteur, SecteurDto> {
         dto.setId(bean.getId());
         dto.setCode(bean.getCode());
         dto.setLibelle(bean.getLibelle());
-        dto.setVilleCode(bean.getVilleCode());
         return dto;
     }
 
