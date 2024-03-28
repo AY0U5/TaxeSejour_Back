@@ -1,5 +1,6 @@
 package ma.zs.sejour.zynerator.service;
 
+import ma.zs.sejour.bean.core.commun.CategorieSejour;
 import ma.zs.sejour.zynerator.audit.AuditBusinessObject;
 import ma.zs.sejour.zynerator.criteria.BaseCriteria;
 import ma.zs.sejour.zynerator.exception.BusinessRuleException;
@@ -277,9 +278,9 @@ public abstract class AbstractServiceImpl<T extends AuditBusinessObject, CRITERI
     }
 
 
-    public List<T> findAll() {
-        return dao.findAll();
-        }
+
+
+
 
     public List<T> findAllOptimized() {
         return dao.findAll();

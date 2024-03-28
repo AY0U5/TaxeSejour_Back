@@ -1,5 +1,7 @@
 package  ma.zs.sejour.ws.dto.taux;
 
+import jakarta.persistence.ManyToOne;
+import ma.zs.sejour.bean.core.commun.Employe;
 import ma.zs.sejour.zynerator.audit.Log;
 import ma.zs.sejour.zynerator.dto.AuditBaseDto;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -16,7 +18,7 @@ public class TauxTaxeSejourAnnuelDto  extends AuditBaseDto {
     private BigDecimal montantNuit  ;
     private BigDecimal pourcentagePremierMoisRetard  ;
     private BigDecimal pourcentageAutreMoisRetard  ;
-    private String employe  ;
+    private Employe employe  ;
 
 
 
@@ -59,19 +61,12 @@ public class TauxTaxeSejourAnnuelDto  extends AuditBaseDto {
         this.pourcentageAutreMoisRetard = pourcentageAutreMoisRetard;
     }
 
-    @Log
-    public String getEmploye(){
-        return this.employe;
+    @ManyToOne
+    public Employe getEmploye() {
+        return employe;
     }
-    public void setEmploye(String employe){
+
+    public void setEmploye(Employe employe) {
         this.employe = employe;
     }
-
-
-
-
-
-
-
-
 }

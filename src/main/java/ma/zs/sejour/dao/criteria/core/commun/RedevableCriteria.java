@@ -10,8 +10,7 @@ public class RedevableCriteria extends BaseCriteria {
     private String cinLike;
     private String nom;
     private String nomLike;
-    private String typeRedevableCode;
-    private String typeRedevableCodeLike;
+    private TypeRedevableCriteria typeRedevableCriteria;
 
 
     public String getCode() {
@@ -62,19 +61,11 @@ public class RedevableCriteria extends BaseCriteria {
         this.nomLike = nomLike;
     }
 
-    public String getTypeRedevableCode() {
-        return typeRedevableCode;
+    public TypeRedevableCriteria getTypeRedevableCriteria() {
+        return typeRedevableCriteria;
     }
 
-    public void setTypeRedevableCode(String typeRedevableCode) {
-        this.typeRedevableCode = typeRedevableCode;
-    }
-
-    public String getTypeRedevableCodeLike() {
-        return typeRedevableCodeLike;
-    }
-
-    public void setTypeRedevableCodeLike(String typeRedevableCodeLike) {
-        this.typeRedevableCodeLike = typeRedevableCodeLike;
+    public void setTypeRedevableCriteria(TypeRedevableCriteria typeRedevableCriteria) {
+        this.typeRedevableCriteria = typeRedevableCriteria;
     }
 }

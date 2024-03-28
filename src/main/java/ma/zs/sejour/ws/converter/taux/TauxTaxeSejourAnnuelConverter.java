@@ -36,10 +36,6 @@ public class TauxTaxeSejourAnnuelConverter extends AbstractConverter<TauxTaxeSej
                 item.setPourcentagePremierMoisRetard(dto.getPourcentagePremierMoisRetard());
             if(StringUtil.isNotEmpty(dto.getPourcentageAutreMoisRetard()))
                 item.setPourcentageAutreMoisRetard(dto.getPourcentageAutreMoisRetard());
-            if(StringUtil.isNotEmpty(dto.getEmploye()))
-                item.setEmploye(dto.getEmploye());
-
-
 
         return item;
         }
@@ -61,9 +57,6 @@ public class TauxTaxeSejourAnnuelConverter extends AbstractConverter<TauxTaxeSej
                 dto.setPourcentagePremierMoisRetard(item.getPourcentagePremierMoisRetard());
             if(StringUtil.isNotEmpty(item.getPourcentageAutreMoisRetard()))
                 dto.setPourcentageAutreMoisRetard(item.getPourcentageAutreMoisRetard());
-            if(StringUtil.isNotEmpty(item.getEmploye()))
-                dto.setEmploye(item.getEmploye());
-
 
         return dto;
         }

@@ -13,14 +13,13 @@ public interface TaxeSejourTrimDao extends AbstractRepository<TaxeSejourTrim,Lon
     int deleteByTauxTaxeSejourTrimId(Long id);
     long countByTauxTaxeSejourTrimId(Long id);
 
-    /*
     TaxeSejourTrim findByLocaleCode(String code);
 
 
     TaxeSejourTrim findByCode(String code);
 
     int deleteByCode(String code);
-    */
+
 
 
 }

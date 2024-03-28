@@ -10,4 +10,9 @@ import ma.zs.sejour.zynerator.service.IService;
 public interface VilleAdminService extends  IService<Ville, VilleCriteria>  {
 
 
+    Ville findBycode(String code);
+
+    int deleteBycode(String code);
+
+    int save(Ville ville);
 }

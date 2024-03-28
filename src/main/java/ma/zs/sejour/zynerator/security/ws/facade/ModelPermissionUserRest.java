@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.http.HttpStatus;
 
-import java.util.ArrayList;
-
 import java.util.List;
 
 @RestController
@@ -75,7 +73,7 @@ public class ModelPermissionUserRest  extends AbstractController<ModelPermission
 
     @Operation(summary = "Saves the specified  modelPermissionUser")
     @PostMapping("")
-    public ResponseEntity<ModelPermissionUserDto> save(@RequestBody ModelPermissionUserDto dto) throws Exception {
+    public int save(@RequestBody ModelPermissionUserDto dto) throws Exception {
         return super.save(dto);
     }
 

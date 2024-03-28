@@ -8,5 +8,10 @@ import ma.zs.sejour.zynerator.service.IService;
 public interface EtatTaxeSejourAdminService extends  IService<EtatTaxeSejour, EtatTaxeSejourCriteria>  {
 
 
+    EtatTaxeSejour findBycode(String code);
+
+    int deleteBycode(String code);
+
+    int save(EtatTaxeSejour etatTaxeSejour);
 
 }

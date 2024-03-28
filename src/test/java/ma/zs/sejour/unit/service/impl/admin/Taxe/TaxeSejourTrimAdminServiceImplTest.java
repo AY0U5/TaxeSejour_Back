@@ -98,10 +98,6 @@ class TaxeSejourTrimAdminServiceImplTest {
 	private TaxeSejourTrim constructSample(int i) {
 		TaxeSejourTrim given = new TaxeSejourTrim();
         given.setId(id);
-        given.setLocale("locale-"+i);
-        given.setLocale(locale);
-        given.setRedevable("redevable-"+i);
-        given.setRedevable(redevable);
         given.setTauxTaxeSejourTrim(new TauxTaxeSejourTrim(1L));
         given.setTauxTaxeSejourTrim(tauxTaxeSejourTrim);
         given.setNbrNuit(BigDecimal.TEN);

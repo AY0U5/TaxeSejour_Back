@@ -3,6 +3,7 @@ package ma.zs.sejour.bean.core.commun;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
+import ma.zs.sejour.ws.dto.commun.RedevableDto;
 import ma.zs.sejour.zynerator.audit.AuditBusinessObject;
 
 import java.util.Objects;
@@ -18,12 +19,12 @@ public class Locale extends AuditBusinessObject {
     private String code;
     @Column(length = 500)
     private String libelle;
-    @Column(length = 500)
-    private String rueCode;
-    @Column(length = 500)
-    private  String categorieSejourCode ;
-    @Column(length = 500)
-    private String redevableCode;
+
+    private Rue rue;
+
+    private  CategorieSejour categorieSejour ;
+
+    private Redevable redevable;
 
 
     @Id
@@ -55,28 +56,31 @@ public class Locale extends AuditBusinessObject {
         this.libelle = libelle;
     }
 
-    public String getRue() {
-        return rueCode;
+    @ManyToOne
+    public Rue getRue() {
+        return rue;
     }
 
-    public void setRue(String rueCode) {
-        this.rueCode = rueCode;
+    public void setRue(Rue rue) {
+        this.rue = rue;
     }
 
-    public String  getCategorieSejour() {
-        return categorieSejourCode;
+    @ManyToOne
+    public CategorieSejour getCategorieSejour() {
+        return categorieSejour;
     }
 
-    public void setCategorieSejour(String categorieSejourCode) {
-        this.categorieSejourCode = categorieSejourCode;
+    public void setCategorieSejour(CategorieSejour categorieSejour) {
+        this.categorieSejour = categorieSejour;
     }
 
-    public String getRedevable() {
-        return redevableCode;
+    @ManyToOne
+    public Redevable getRedevable() {
+        return redevable;
     }
 
-    public void setRedevable(String redevableCode) {
-        this.redevableCode = redevableCode;
+    public void setRedevable(Redevable redevable) {
+        this.redevable = redevable;
     }
 
     @Override

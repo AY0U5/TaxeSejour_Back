@@ -49,7 +49,7 @@ public class RoleUserRest  extends AbstractController<RoleUser, RoleUserDto, Rol
 
     @Operation(summary = "Saves the specified  roleUser")
     @PostMapping("")
-    public ResponseEntity<RoleUserDto> save(@RequestBody RoleUserDto dto) throws Exception {
+    public int save(@RequestBody RoleUserDto dto) throws Exception {
         return super.save(dto);
     }
 

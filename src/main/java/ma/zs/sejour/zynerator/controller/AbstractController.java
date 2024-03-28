@@ -163,7 +163,7 @@ public class AbstractController<T extends AuditBusinessObject, DTO extends BaseD
 
 
 
-    public ResponseEntity<DTO> save(DTO dto) throws Exception {
+    public int save(DTO dto) throws Exception {
         if(dto!=null){
             converter.init(true);
             T myT = converter.toItem(dto);

@@ -20,7 +20,7 @@ public class EtatTaxeSejour extends AuditBusinessObject {
     @Column(length = 500)
     private String code;
 
-    private String secteurCode;
+    private Secteur secteur;
 
 
 
@@ -51,13 +51,16 @@ public class EtatTaxeSejour extends AuditBusinessObject {
     public void setCode(String code) {
         this.code = code;
     }
-    public String getSecteur() {
-        return secteurCode;
-    }
-    public void setSecteur(String secteurCode) {
-        this.secteurCode = secteurCode;
+
+
+    @ManyToOne
+    public Secteur getSecteur() {
+        return secteur;
     }
 
+    public void setSecteur(Secteur secteur) {
+        this.secteur = secteur;
+    }
 
     @Override
     public boolean equals(Object o) {

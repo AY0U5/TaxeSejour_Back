@@ -13,10 +13,10 @@ public interface TaxeSejourAnnuelDao extends AbstractRepository<TaxeSejourAnnuel
     int deleteByTauxTaxeSejourAnnuelId(Long id);
     long countByTauxTaxeSejourAnnuelId(Long id);
 
-    /*
+
     TaxeSejourAnnuel getTaxeSejourAnnuelByCode(String code);
     int deleteTaxeSejourAnnuelByCode(String code);
-    */
+
 
 
 }

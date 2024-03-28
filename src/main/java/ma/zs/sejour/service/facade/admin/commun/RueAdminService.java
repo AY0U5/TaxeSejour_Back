@@ -10,6 +10,9 @@ import ma.zs.sejour.zynerator.service.IService;
 public interface RueAdminService extends  IService<Rue, RueCriteria>  {
 
 
+    Rue findByCode(String code);
 
+    int deleteByCode(String code);
 
+    int save(Rue rue);
 }

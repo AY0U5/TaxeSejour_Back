@@ -1,6 +1,7 @@
 package ma.zs.sejour.dao.criteria.core.commun;
 
 
+import ma.zs.sejour.bean.core.commun.Rue;
 import ma.zs.sejour.zynerator.criteria.BaseCriteria;
 
 public class LocaleCriteria extends BaseCriteria {
@@ -11,14 +12,10 @@ public class LocaleCriteria extends BaseCriteria {
     private String libelle;
     private String libelleLike;
 
-    private String rueCode;
-    private String rueCodeLike;
+    private Rue rue;
 
-    private String categorieSejourCode ;
-    private String categorieSejourCodeLike ;
-
-    private String redevableCode;
-    private String redevableCodeLike;
+    private CategorieSejourCriteria categorieSejourCriteria;
+    private RedevableCriteria redevableCriteria;
 
 
     public String getCode() {
@@ -37,28 +34,20 @@ public class LocaleCriteria extends BaseCriteria {
         this.libelle = libelle;
     }
 
-    public String getRueCode() {
-        return rueCode;
+    public Rue getRue() {
+        return rue;
     }
 
-    public void setRueCode(String rueCode) {
-        this.rueCode = rueCode;
+    public void setRue(Rue rue) {
+        this.rue = rue;
     }
 
-    public String getCategorieSejourCode() {
-        return categorieSejourCode;
+    public CategorieSejourCriteria getCategorieSejourCriteria() {
+        return categorieSejourCriteria;
     }
 
-    public void setCategorieSejourCode(String categorieSejourCode) {
-        this.categorieSejourCode = categorieSejourCode;
-    }
-
-    public String getRedevableCode() {
-        return redevableCode;
-    }
-
-    public void setRedevableCode(String redevableCode) {
-        this.redevableCode = redevableCode;
+    public void setCategorieSejourCriteria(CategorieSejourCriteria categorieSejourCriteria) {
+        this.categorieSejourCriteria = categorieSejourCriteria;
     }
 
     public String getCodeLike() {
@@ -77,27 +66,13 @@ public class LocaleCriteria extends BaseCriteria {
         this.libelleLike = libelleLike;
     }
 
-    public String getRueCodeLike() {
-        return rueCodeLike;
+
+    public RedevableCriteria getRedevableCriteria() {
+        return redevableCriteria;
     }
 
-    public void setRueCodeLike(String rueCodeLike) {
-        this.rueCodeLike = rueCodeLike;
-    }
-
-    public String getCategorieSejourCodeLike() {
-        return categorieSejourCodeLike;
-    }
-
-    public void setCategorieSejourCodeLike(String categorieSejourCodeLike) {
-        this.categorieSejourCodeLike = categorieSejourCodeLike;
-    }
-
-    public String getRedevableCodeLike() {
-        return redevableCodeLike;
-    }
-
-    public void setRedevableCodeLike(String redevableCodeLike) {
-        this.redevableCodeLike = redevableCodeLike;
+    public void setRedevableCriteria(RedevableCriteria redevableCriteria) {
+        this.redevableCriteria = redevableCriteria;
     }
 }
+

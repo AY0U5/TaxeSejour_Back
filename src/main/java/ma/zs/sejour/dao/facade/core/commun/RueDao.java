@@ -5,7 +5,7 @@ import ma.zs.sejour.zynerator.repository.AbstractRepository;
 import org.springframework.stereotype.Repository;
 @Repository
 public interface RueDao extends AbstractRepository<Rue,Long> {
-    /*Rue findByCode(String code);
-    int deleteByCode(String code);*/
+    Rue findByCode(String code);
+    int deleteByCode(String code);
 
 }

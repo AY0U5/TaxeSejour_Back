@@ -9,7 +9,7 @@ import java.util.List;
 public interface QuartierDao extends AbstractRepository< Quartier,Long> {
     List<Quartier>findBySecteurCode(String code);
 
-    /*Quartier findBycode(String code);
+    Quartier findBycode(String code);
 
-    int deleteBycode(String code);*/
+    int deleteBycode(String code);
 }

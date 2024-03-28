@@ -9,8 +9,7 @@ public class QuartierCriteria extends BaseCriteria {
     private String libelleLike;
     private String code;
     private String codeLike;
-    private String secteurCode;
-    private String secteurCodeLike;
+    private SecteurCriteria secteurCriteria;
 
     public String getLibelle() {
         return libelle;
@@ -44,19 +43,11 @@ public class QuartierCriteria extends BaseCriteria {
         this.codeLike = codeLike;
     }
 
-    public String getSecteurCode() {
-        return secteurCode;
+    public SecteurCriteria getSecteurCriteria() {
+        return secteurCriteria;
     }
 
-    public void setSecteurCode(String secteurCode) {
-        this.secteurCode = secteurCode;
-    }
-
-    public String getSecteurCodeLike() {
-        return secteurCodeLike;
-    }
-
-    public void setSecteurCodeLike(String secteurCodeLike) {
-        this.secteurCodeLike = secteurCodeLike;
+    public void setSecteurCriteria(SecteurCriteria secteurCriteria) {
+        this.secteurCriteria = secteurCriteria;
     }
 }

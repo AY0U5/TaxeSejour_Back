@@ -7,9 +7,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface EtatTaxeSejourDao extends AbstractRepository<EtatTaxeSejour,Long> {
 
-    /*EtatTaxeSejour findBycode(String code);
+   EtatTaxeSejour findBycode(String code);
 
-    int deleteBycode(String code);*/
+    int deleteBycode(String code);
 
 
 }

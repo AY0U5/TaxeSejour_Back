@@ -10,5 +10,11 @@ import ma.zs.sejour.zynerator.service.IService;
 public interface RedevableAdminService extends  IService<Redevable, RedevableCriteria>  {
 
 
+    Redevable findByCode(String code);
 
+    int deleteByCode(String code);
+
+    int deleteByTypeRedevableCode(String code);
+
+    int save(Redevable redevable);
 }

@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface LocaleDao extends AbstractRepository<Locale,Long> {
 
-    /*Locale findByCode(String code);
-    int deleteByCode(String code);*/
+   Locale findByCode(String code);
+    int deleteByCode(String code);
 }

@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CategorieSejourDao extends AbstractRepository<CategorieSejour,Long> {
-    /*CategorieSejour findByCode(String code);
-    int deleteByCode(String code);*/
+    CategorieSejour findByCode(String code);
+    int deleteByCode(String code);
 
 }

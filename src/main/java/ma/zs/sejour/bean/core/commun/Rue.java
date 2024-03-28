@@ -11,7 +11,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "rue")
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@SequenceGenerator(name="rue_seq",sequenceName="rue_seq",allocationSize=1, initialValue = 1)
+@SequenceGenerator(name = "rue_seq", sequenceName = "rue_seq", allocationSize = 1, initialValue = 1)
 
 public class Rue extends AuditBusinessObject {
 
@@ -20,21 +20,22 @@ public class Rue extends AuditBusinessObject {
     private String libelle;
     @Column(length = 500)
     private String code;
-    private String quartierCode;
+    private Quartier quartier;
 
+
+    @ManyToOne
+    public Quartier getQuartier() {
+        return quartier;
+    }
+
+    public void setQuartier(Quartier quartier) {
+        this.quartier = quartier;
+    }
 
     @Id
     @Column(name = "id")
-    @GeneratedValue(strategy =  GenerationType.SEQUENCE,generator="rue_seq")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "rue_seq")
 
-
-    public String getQuartier() {
-        return quartierCode;
-    }
-
-    public void setQuartier(String quartiercode) {
-        this.quartierCode = quartierCode;
-    }
 
     public Long getId() {
         return id;

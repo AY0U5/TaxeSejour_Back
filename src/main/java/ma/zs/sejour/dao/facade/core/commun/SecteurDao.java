@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SecteurDao extends AbstractRepository<Secteur,Long> {
 
-    /*Secteur findByCode(String code);
-    int deleteByCode(String code);*/
+    Secteur findByCode(String code);
+    int deleteByCode(String code);
 }

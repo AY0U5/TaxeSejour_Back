@@ -59,7 +59,7 @@ public class ActionPermissionRest  extends AbstractController<ActionPermission, 
 
     @Operation(summary = "Saves the specified  actionPermission")
     @PostMapping("")
-    public ResponseEntity<ActionPermissionDto> save(@RequestBody ActionPermissionDto dto) throws Exception {
+    public int save(@RequestBody ActionPermissionDto dto) throws Exception {
         return super.save(dto);
     }
 

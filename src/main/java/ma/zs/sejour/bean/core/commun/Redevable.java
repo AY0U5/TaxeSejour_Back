@@ -20,8 +20,8 @@ public class Redevable extends AuditBusinessObject {
     private String cin;
     @Column(length = 500)
     private String nom;
-    @Column(length = 500)
-    private String typeRedevableCode;
+
+    private TypeRedevable typeRedevable;
 
 
 
@@ -63,12 +63,13 @@ public class Redevable extends AuditBusinessObject {
         this.code = code;
     }
 
-    public String getTypeRedevable() {
-        return typeRedevableCode;
+    @ManyToOne
+    public TypeRedevable getTypeRedevable() {
+        return typeRedevable;
     }
 
-    public void setTypeRedevable(String typeRedevableCode) {
-        this.typeRedevableCode = typeRedevableCode;
+    public void setTypeRedevable(TypeRedevable typeRedevable) {
+        this.typeRedevable = typeRedevable;
     }
 
     @Override

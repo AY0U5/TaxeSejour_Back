@@ -3,16 +3,13 @@ package ma.zs.sejour.bean.core.Taxe;
 import java.util.Objects;
 
 
-
-
-
+import ma.zs.sejour.bean.core.commun.Employe;
 import ma.zs.sejour.bean.core.taux.TauxTaxeSejourAnnuel;
 
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import ma.zs.sejour.zynerator.audit.AuditBusinessObject;
 import jakarta.persistence.*;
-import java.util.Objects;
 
 
 import java.math.BigDecimal;
@@ -35,8 +32,9 @@ public class TaxeSejourAnnuel   extends AuditBusinessObject     {
     private BigDecimal montantTotal = BigDecimal.ZERO;
     private BigDecimal montantRetard = BigDecimal.ZERO;
     private BigDecimal nbrMoisRetard = BigDecimal.ZERO;
-    @Column(length = 500)
-    private String employe;
+
+
+    private Employe employe;
 
     private TauxTaxeSejourAnnuel tauxTaxeSejourAnnuel ;
 
@@ -112,13 +110,15 @@ public class TaxeSejourAnnuel   extends AuditBusinessObject     {
     public void setNbrMoisRetard(BigDecimal nbrMoisRetard){
         this.nbrMoisRetard = nbrMoisRetard;
     }
-    public String getEmploye(){
-        return this.employe;
-    }
-    public void setEmploye(String employe){
-        this.employe = employe;
+
+    @ManyToOne
+    public Employe getEmploye() {
+        return employe;
     }
 
+    public void setEmploye(Employe employe) {
+        this.employe = employe;
+    }
 
     @Override
     public boolean equals(Object o) {

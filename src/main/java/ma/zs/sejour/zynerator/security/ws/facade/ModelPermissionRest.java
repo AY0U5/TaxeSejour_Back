@@ -58,7 +58,7 @@ public class ModelPermissionRest  extends AbstractController<ModelPermission, Mo
 
     @Operation(summary = "Saves the specified  modelPermission")
     @PostMapping("")
-    public ResponseEntity<ModelPermissionDto> save(@RequestBody ModelPermissionDto dto) throws Exception {
+    public int save(@RequestBody ModelPermissionDto dto) throws Exception {
         return super.save(dto);
     }
 

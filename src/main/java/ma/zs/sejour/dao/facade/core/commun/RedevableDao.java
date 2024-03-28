@@ -5,7 +5,9 @@ import ma.zs.sejour.zynerator.repository.AbstractRepository;
 import org.springframework.stereotype.Repository;
 @Repository
 public interface RedevableDao extends AbstractRepository<Redevable,Long> {
-    /*Redevable findByCode(String code);
+
+    Redevable findByCode(String code);
     int deleteByCode(String code);
-    int deleteByTypeRedevableCode(String code);*/
+    int deleteByTypeRedevableCode(String code);
+
 }

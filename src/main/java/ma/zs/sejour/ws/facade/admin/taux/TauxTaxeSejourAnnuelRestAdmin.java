@@ -1,10 +1,6 @@
 package  ma.zs.sejour.ws.facade.admin.taux;
 
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.Schema;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
 
 import ma.zs.sejour.bean.core.taux.TauxTaxeSejourAnnuel;
 import ma.zs.sejour.dao.criteria.core.taux.TauxTaxeSejourAnnuelCriteria;
@@ -12,7 +8,6 @@ import ma.zs.sejour.service.facade.admin.taux.TauxTaxeSejourAnnuelAdminService;
 import ma.zs.sejour.ws.converter.taux.TauxTaxeSejourAnnuelConverter;
 import ma.zs.sejour.ws.dto.taux.TauxTaxeSejourAnnuelDto;
 import ma.zs.sejour.zynerator.controller.AbstractController;
-import ma.zs.sejour.zynerator.dto.AuditEntityDto;
 import ma.zs.sejour.zynerator.util.PaginatedList;
 
 
@@ -22,8 +17,6 @@ import org.springframework.web.bind.annotation.*;
 
 
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
-import ma.zs.sejour.zynerator.process.Result;
 
 
 import org.springframework.web.multipart.MultipartFile;
@@ -56,7 +49,7 @@ public class TauxTaxeSejourAnnuelRestAdmin  extends AbstractController<TauxTaxeS
 
     @Operation(summary = "Saves the specified  tauxTaxeSejourAnnuel")
     @PostMapping("")
-    public ResponseEntity<TauxTaxeSejourAnnuelDto> save(@RequestBody TauxTaxeSejourAnnuelDto dto) throws Exception {
+    public int save(@RequestBody TauxTaxeSejourAnnuelDto dto) throws Exception {
         return super.save(dto);
     }
 

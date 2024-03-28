@@ -56,7 +56,7 @@ public class UserRest  extends AbstractController<User, UserDto, UserCriteria, U
 
     @Operation(summary = "Saves the specified  user")
     @PostMapping("")
-    public ResponseEntity<UserDto> save(@RequestBody UserDto dto) throws Exception {
+    public int save(@RequestBody UserDto dto) throws Exception {
         ResponseEntity<UserDto> save = super.save(dto);
         return save;
     }

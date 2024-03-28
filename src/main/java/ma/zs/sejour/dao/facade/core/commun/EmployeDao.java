@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EmployeDao extends AbstractRepository<Employe,Long> {
+    Employe findByCode(String code);
+    int deleteByCode(String code);
 
-    /*Employe findByCode(String code);
-    int deleteByCode(String code);*/
 }

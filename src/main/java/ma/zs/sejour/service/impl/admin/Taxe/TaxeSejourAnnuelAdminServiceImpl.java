@@ -1,11 +1,14 @@
 package ma.zs.sejour.service.impl.admin.Taxe;
 
 
+import ma.zs.sejour.bean.core.Etat.EtatTaxeSejour;
 import ma.zs.sejour.bean.core.Taxe.TaxeSejourAnnuel;
+import ma.zs.sejour.bean.core.commun.Employe;
 import ma.zs.sejour.dao.criteria.core.Taxe.TaxeSejourAnnuelCriteria;
 import ma.zs.sejour.dao.facade.core.Taxe.TaxeSejourAnnuelDao;
 import ma.zs.sejour.dao.specification.core.Taxe.TaxeSejourAnnuelSpecification;
 import ma.zs.sejour.service.facade.admin.Taxe.TaxeSejourAnnuelAdminService;
+import ma.zs.sejour.service.facade.admin.etat.EtatTaxeSejourAdminService;
 import ma.zs.sejour.zynerator.service.AbstractServiceImpl;
 import ma.zs.sejour.zynerator.util.ListUtil;
 import org.springframework.stereotype.Service;
@@ -48,13 +51,12 @@ public class TaxeSejourAnnuelAdminServiceImpl extends AbstractServiceImpl<TaxeSe
 
 
 
-
-
-
     public void configure() {
         super.configure(TaxeSejourAnnuel.class, TaxeSejourAnnuelSpecification.class);
     }
 
+
+    private EtatTaxeSejourAdminService etatTaxeSejourService;
 
     @Autowired
     private TauxTaxeSejourAnnuelAdminService tauxTaxeSejourAnnuelService ;

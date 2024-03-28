@@ -2,6 +2,7 @@ package ma.zs.sejour.dao.criteria.core.commun;
 
 
 
+import ma.zs.sejour.bean.core.commun.Ville;
 import ma.zs.sejour.zynerator.criteria.BaseCriteria;
 
 public class SecteurCriteria extends BaseCriteria {
@@ -10,8 +11,7 @@ public class SecteurCriteria extends BaseCriteria {
     private String libelleLike;
     private String code;
     private String codeLike;
-    private String villeCode;
-    private String villeCodeLike;
+    private VilleCriteria villeCriteria;
 
     public String getLibelle() {
         return libelle;
@@ -45,19 +45,11 @@ public class SecteurCriteria extends BaseCriteria {
         this.codeLike = codeLike;
     }
 
-    public String getVilleCode() {
-        return villeCode;
+    public VilleCriteria getVilleCriteria() {
+        return villeCriteria;
     }
 
-    public void setVilleCode(String villeCode) {
-        this.villeCode = villeCode;
-    }
-
-    public String getVilleCodeLike() {
-        return villeCodeLike;
-    }
-
-    public void setVilleCodeLike(String villeCodeLike) {
-        this.villeCodeLike = villeCodeLike;
+    public void setVilleCriteria(VilleCriteria villeCriteria) {
+        this.villeCriteria = villeCriteria;
     }
 }

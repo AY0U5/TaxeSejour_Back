@@ -47,8 +47,6 @@ public class TaxeSejourAnnuelConverter extends AbstractConverter<TaxeSejourAnnue
                 item.setMontantRetard(dto.getMontantRetard());
             if(StringUtil.isNotEmpty(dto.getNbrMoisRetard()))
                 item.setNbrMoisRetard(dto.getNbrMoisRetard());
-            if(StringUtil.isNotEmpty(dto.getEmploye()))
-                item.setEmploye(dto.getEmploye());
             if(this.tauxTaxeSejourAnnuel && dto.getTauxTaxeSejourAnnuel()!=null &&  dto.getTauxTaxeSejourAnnuel().getId() != null)
                 item.setTauxTaxeSejourAnnuel(tauxTaxeSejourAnnuelConverter.toItem(dto.getTauxTaxeSejourAnnuel())) ;
 
@@ -81,8 +79,6 @@ public class TaxeSejourAnnuelConverter extends AbstractConverter<TaxeSejourAnnue
                 dto.setMontantRetard(item.getMontantRetard());
             if(StringUtil.isNotEmpty(item.getNbrMoisRetard()))
                 dto.setNbrMoisRetard(item.getNbrMoisRetard());
-            if(StringUtil.isNotEmpty(item.getEmploye()))
-                dto.setEmploye(item.getEmploye());
             if(this.tauxTaxeSejourAnnuel && item.getTauxTaxeSejourAnnuel()!=null) {
                 dto.setTauxTaxeSejourAnnuel(tauxTaxeSejourAnnuelConverter.toDto(item.getTauxTaxeSejourAnnuel())) ;
 

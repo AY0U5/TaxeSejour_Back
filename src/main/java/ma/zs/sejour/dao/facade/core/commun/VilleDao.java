@@ -5,8 +5,8 @@ import ma.zs.sejour.zynerator.repository.AbstractRepository;
 import org.springframework.stereotype.Repository;
 @Repository
 public interface VilleDao  extends AbstractRepository<Ville,Long> {
-    /*Ville findByCode(String code);
+    Ville findByCode(String code);
 
-    int deleteByCode(String code);*/
+    int deleteByCode(String code);
 
 }

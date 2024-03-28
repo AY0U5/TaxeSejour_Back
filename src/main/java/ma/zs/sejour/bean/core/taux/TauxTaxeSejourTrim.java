@@ -9,6 +9,7 @@ import java.util.Objects;
 
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import ma.zs.sejour.bean.core.commun.Employe;
 import ma.zs.sejour.zynerator.audit.AuditBusinessObject;
 import jakarta.persistence.*;
 import java.util.Objects;
@@ -30,8 +31,9 @@ public class TauxTaxeSejourTrim   extends AuditBusinessObject     {
     private BigDecimal montantNuit = BigDecimal.ZERO;
     private BigDecimal pourcentagePremierMoisRetard = BigDecimal.ZERO;
     private BigDecimal pourcentageAutreMoisRetard = BigDecimal.ZERO;
-    @Column(length = 500)
-    private String employe;
+
+
+    private Employe employe;
 
 
 
@@ -80,13 +82,14 @@ public class TauxTaxeSejourTrim   extends AuditBusinessObject     {
     public void setPourcentageAutreMoisRetard(BigDecimal pourcentageAutreMoisRetard){
         this.pourcentageAutreMoisRetard = pourcentageAutreMoisRetard;
     }
-    public String getEmploye(){
-        return this.employe;
-    }
-    public void setEmploye(String employe){
-        this.employe = employe;
+    @ManyToOne
+    public Employe getEmploye() {
+        return employe;
     }
 
+    public void setEmploye(Employe employe) {
+        this.employe = employe;
+    }
 
     @Override
     public boolean equals(Object o) {

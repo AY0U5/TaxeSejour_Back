@@ -20,7 +20,7 @@ public class Secteur extends AuditBusinessObject {
     @Column(length = 500)
     private String code;
 
-    private String villeCode;
+    private Ville ville;
 
     public Long getId() {
         return id;
@@ -31,13 +31,15 @@ public class Secteur extends AuditBusinessObject {
     }
 
 
-    public String getVilleCode() {
-        return villeCode;
+    @ManyToOne
+    public Ville getVille() {
+        return ville;
     }
 
-    public void setVilleCode(String villeCode) {
-        this.villeCode = villeCode;
+    public void setVille(Ville ville) {
+        this.ville = ville;
     }
+
 
     @Id
     @Column(name = "id")
