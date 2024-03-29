@@ -2,7 +2,6 @@ package ma.zs.sejour.ws.facade.admin.commun;
 
 import io.swagger.v3.oas.annotations.Operation;
 import ma.zs.sejour.bean.core.commun.Ville;
-import ma.zs.sejour.bean.core.commun.Ville;
 import ma.zs.sejour.dao.criteria.core.commun.VilleCriteria;
 import ma.zs.sejour.service.facade.admin.commun.VilleAdminService;
 import ma.zs.sejour.ws.converter.commun.VilleConverter;

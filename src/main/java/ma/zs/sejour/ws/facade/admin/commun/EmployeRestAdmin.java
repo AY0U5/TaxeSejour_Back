@@ -1,18 +1,12 @@
 package ma.zs.sejour.ws.facade.admin.commun;
 
 import io.swagger.v3.oas.annotations.Operation;
-import ma.zs.sejour.bean.core.commun.CategorieSejour;
 import ma.zs.sejour.bean.core.commun.Employe;
-import ma.zs.sejour.dao.criteria.core.commun.CategorieSejourCriteria;
 import ma.zs.sejour.dao.criteria.core.commun.EmployeCriteria;
-import ma.zs.sejour.service.facade.admin.commun.CategorieSejourAdminService;
 import ma.zs.sejour.service.facade.admin.commun.EmployeAdminService;
-import ma.zs.sejour.ws.converter.commun.CategorieSejourConverter;
 import ma.zs.sejour.ws.converter.commun.EmployeConverter;
-import ma.zs.sejour.ws.dto.commun.CategorieSejourDto;
 import ma.zs.sejour.ws.dto.commun.EmployeDto;
 import ma.zs.sejour.zynerator.controller.AbstractController;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 public class EmployeRestAdmin extends AbstractController<Employe, EmployeDto, EmployeCriteria, EmployeAdminService, EmployeConverter> {

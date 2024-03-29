@@ -2,15 +2,10 @@ package ma.zs.sejour.ws.facade.admin.commun;
 
 
 import io.swagger.v3.oas.annotations.Operation;
-import ma.zs.sejour.bean.core.commun.Employe;
 import ma.zs.sejour.bean.core.commun.Locale;
-import ma.zs.sejour.dao.criteria.core.commun.EmployeCriteria;
 import ma.zs.sejour.dao.criteria.core.commun.LocaleCriteria;
-import ma.zs.sejour.service.facade.admin.commun.EmployeAdminService;
 import ma.zs.sejour.service.facade.admin.commun.LocaleAdminService;
-import ma.zs.sejour.ws.converter.commun.EmployeConverter;
 import ma.zs.sejour.ws.converter.commun.LocalConverter;
-import ma.zs.sejour.ws.dto.commun.EmployeDto;
 import ma.zs.sejour.ws.dto.commun.LocaleDto;
 import ma.zs.sejour.zynerator.controller.AbstractController;
 import org.springframework.web.bind.annotation.*;
