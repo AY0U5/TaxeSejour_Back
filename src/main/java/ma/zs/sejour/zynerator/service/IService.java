@@ -1,5 +1,6 @@
 package ma.zs.sejour.zynerator.service;
 
+import ma.zs.sejour.bean.core.commun.Locale;
 import ma.zs.sejour.zynerator.bean.BusinessObject;
 import ma.zs.sejour.zynerator.criteria.BaseCriteria;
 import ma.zs.sejour.zynerator.dto.AuditEntityDto;
@@ -51,4 +52,6 @@ public interface IService<T extends BusinessObject, Criteria extends BaseCriteri
     public String uploadFile(String checksumOld, String tempUpladedFile,String destinationFilePath) throws Exception ;
 
     List<T> importExcel(MultipartFile file);
+
+
 }

@@ -15,4 +15,6 @@ public interface LocaleAdminService extends  IService<Locale, LocaleCriteria>  {
 
     @Transactional
     int deleteByCode(String code);
+
+    int save(Locale locale);
 }
