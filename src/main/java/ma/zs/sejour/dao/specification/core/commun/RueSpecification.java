@@ -12,7 +12,6 @@ public class RueSpecification extends  AbstractSpecification<RueCriteria, Rue>  
         addPredicateId("id", criteria);
         addPredicate("libelle", criteria.getLibelle(),criteria.getLibelleLike());
         addPredicate("code", criteria.getCode(),criteria.getCodeLike());
-        addPredicate("quartierCode", criteria.getQuartierCode(),criteria.getQuartierCodeLike());
     }
 
     public RueSpecification(RueCriteria criteria) {

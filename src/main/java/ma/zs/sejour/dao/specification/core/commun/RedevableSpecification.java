@@ -14,7 +14,6 @@ public class RedevableSpecification extends  AbstractSpecification<RedevableCrit
         addPredicate("cin", criteria.getCin(),criteria.getCinLike());
         addPredicate("code", criteria.getCode(),criteria.getCodeLike());
         addPredicate("nom", criteria.getNom(),criteria.getNomLike());
-        addPredicate("typeRedevableCode", criteria.getTypeRedevableCode(),criteria.getTypeRedevableCodeLike());
     }
 
     public RedevableSpecification(RedevableCriteria criteria) {

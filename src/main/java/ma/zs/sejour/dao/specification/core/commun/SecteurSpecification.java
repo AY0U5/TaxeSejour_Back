@@ -13,7 +13,6 @@ public class SecteurSpecification extends  AbstractSpecification<SecteurCriteria
         addPredicateId("id", criteria);
         addPredicate("libelle", criteria.getLibelle(),criteria.getLibelleLike());
         addPredicate("code", criteria.getCode(),criteria.getCodeLike());
-        addPredicate("villeCode", criteria.getVilleCode(),criteria.getVilleCodeLike());
     }
 
     public SecteurSpecification(SecteurCriteria criteria) {

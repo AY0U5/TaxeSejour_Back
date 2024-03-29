@@ -11,7 +11,6 @@ public class EtatTaxeSejourSpecification extends  AbstractSpecification<EtatTaxe
         addPredicateId("id", criteria);
         addPredicate("libelle", criteria.getLibelle(),criteria.getLibelleLike());
         addPredicate("code", criteria.getCode(),criteria.getCodeLike());
-        addPredicate("secteurCode", criteria.getSecteurCode(),criteria.getSecteurCodeLike());
     }
 
     public EtatTaxeSejourSpecification(EtatTaxeSejourCriteria criteria) {

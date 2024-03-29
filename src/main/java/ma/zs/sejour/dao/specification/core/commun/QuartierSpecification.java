@@ -10,7 +10,6 @@ public class QuartierSpecification extends  AbstractSpecification<QuartierCriter
         addPredicateId("id", criteria);
         addPredicate("libelle", criteria.getLibelle(),criteria.getLibelleLike());
         addPredicate("code", criteria.getCode(),criteria.getCodeLike());
-        addPredicate("sectaurCode", criteria.getSecteurCode(),criteria.getSecteurCodeLike());
     }
 
     public QuartierSpecification(QuartierCriteria criteria) {

@@ -10,9 +10,6 @@ public class LocaleSpecification extends  AbstractSpecification<LocaleCriteria, 
         addPredicateId("id", criteria);
         addPredicate("libelle", criteria.getLibelle(),criteria.getLibelleLike());
         addPredicate("code", criteria.getCode(),criteria.getCodeLike());
-        addPredicate("rueCode", criteria.getRueCode(),criteria.getRueCodeLike());
-        addPredicate("categorieSejourCode", criteria.getCategorieSejourCode(),criteria.getCategorieSejourCodeLike());
-        addPredicate("redevableCode", criteria.getRedevableCode(),criteria.getRedevableCodeLike());
     }
 
     public LocaleSpecification(LocaleCriteria criteria) {
