@@ -120,6 +120,4 @@ public class TauxTaxeSejourAnnuelRestAdmin  extends AbstractController<TauxTaxeS
     }
 
 
-
-
 }
