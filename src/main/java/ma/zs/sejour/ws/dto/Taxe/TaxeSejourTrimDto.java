@@ -2,6 +2,7 @@ package  ma.zs.sejour.ws.dto.Taxe;
 
 import jakarta.persistence.ManyToOne;
 import ma.zs.sejour.bean.core.commun.Employe;
+import ma.zs.sejour.ws.dto.commun.EmployeDto;
 import ma.zs.sejour.zynerator.audit.Log;
 import ma.zs.sejour.zynerator.dto.AuditBaseDto;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -27,7 +28,7 @@ public class TaxeSejourTrimDto  extends AuditBaseDto {
     private BigDecimal montantPremierMoisRetard  ;
     private BigDecimal montantAutreMoisRetard  ;
     private BigDecimal montantTotal  ;
-    private Employe  employe  ;
+    private EmployeDto employe  ;
 
     private TauxTaxeSejourTrimDto tauxTaxeSejourTrim ;
 
@@ -145,11 +146,11 @@ public class TaxeSejourTrimDto  extends AuditBaseDto {
     }
 
 
-    public Employe getEmploye() {
+    public EmployeDto getEmploye() {
         return employe;
     }
 
-    public void setEmploye(Employe employe) {
+    public void setEmploye(EmployeDto employe) {
         this.employe = employe;
     }
 }

@@ -13,9 +13,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class CategorieSejourConverter extends AbstractConverter<CategorieSejour, CategorieSejourDto>{
 
-    @Autowired
-    private CategorieSejourConverter categorieSejourConverter ;
-    private boolean categorieSejour;
 
     public  CategorieSejourConverter() {
         super(CategorieSejour.class, CategorieSejourDto.class);
@@ -24,24 +21,34 @@ public class CategorieSejourConverter extends AbstractConverter<CategorieSejour,
 
     @Override
     public CategorieSejour toItem(CategorieSejourDto dto) {
-        CategorieSejour bean = new CategorieSejour();
-        bean.setId(dto.getId());
-        bean.setCode(dto.getCode());
-        bean.setLibelle(dto.getLibelle());
-        return bean;
+        if (dto == null) {
+            return null;
+        }else {
+            CategorieSejour item = new CategorieSejour();
+            if(StringUtil.isNotEmpty(dto.getId()))
+                item.setId(dto.getId());
+            if(StringUtil.isNotEmpty(dto.getCode()))
+                item.setCode(dto.getCode());
+            if(StringUtil.isNotEmpty(dto.getLibelle()))
+                item.setLibelle(dto.getLibelle());
+            return item;
+        }
     }
 
 
     @Override
     public CategorieSejourDto toDto(CategorieSejour bean) {
-        CategorieSejourDto dto = new CategorieSejourDto();
-        dto.setId(bean.getId());
-        dto.setCode(bean.getCode());
-        dto.setLibelle(bean.getLibelle());
-        return dto;
+        if (bean == null) {
+            return null;
+        }else {
+            CategorieSejourDto dto = new CategorieSejourDto();
+            if (StringUtil.isNotEmpty(bean.getId()))
+                dto.setId(bean.getId());
+            if (StringUtil.isNotEmpty(bean.getCode()))
+                dto.setCode(bean.getCode());
+            if (StringUtil.isNotEmpty(bean.getLibelle()))
+                dto.setLibelle(bean.getLibelle());
+            return dto;
+        }
     }
-
-    public void initObject(boolean value) {
-    }
-
 }

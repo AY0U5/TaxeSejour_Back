@@ -41,10 +41,6 @@ public class TaxeSejourAnnuelDetailConverter extends AbstractConverter<TaxeSejou
                 item.setAnnee(dto.getAnnee());
             if(this.taxeSejourAnnuel && dto.getTaxeSejourAnnuel()!=null &&  dto.getTaxeSejourAnnuel().getId() != null)
                 item.setTaxeSejourAnnuel(taxeSejourAnnuelConverter.toItem(dto.getTaxeSejourAnnuel())) ;
-
-
-
-
         return item;
         }
     }

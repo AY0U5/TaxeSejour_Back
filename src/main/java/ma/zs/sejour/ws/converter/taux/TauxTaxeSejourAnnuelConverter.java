@@ -1,5 +1,8 @@
 package  ma.zs.sejour.ws.converter.taux;
 
+import ma.zs.sejour.bean.core.Taxe.TaxeSejourTrim;
+import ma.zs.sejour.ws.converter.commun.EmployeConverter;
+import ma.zs.sejour.ws.dto.Taxe.TaxeSejourTrimDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -15,6 +18,10 @@ import ma.zs.sejour.ws.dto.taux.TauxTaxeSejourAnnuelDto;
 @Component
 public class TauxTaxeSejourAnnuelConverter extends AbstractConverter<TauxTaxeSejourAnnuel, TauxTaxeSejourAnnuelDto> {
 
+    @Autowired
+    private EmployeConverter employeConverter;
+
+    private boolean employe;
 
     public  TauxTaxeSejourAnnuelConverter() {
         super(TauxTaxeSejourAnnuel.class, TauxTaxeSejourAnnuelDto.class);
@@ -36,7 +43,8 @@ public class TauxTaxeSejourAnnuelConverter extends AbstractConverter<TauxTaxeSej
                 item.setPourcentagePremierMoisRetard(dto.getPourcentagePremierMoisRetard());
             if(StringUtil.isNotEmpty(dto.getPourcentageAutreMoisRetard()))
                 item.setPourcentageAutreMoisRetard(dto.getPourcentageAutreMoisRetard());
-
+            if(this.employe && dto.getEmploye() != null && dto.getEmploye().getId() != null)
+                item.setEmploye(employeConverter.toItem(dto.getEmploye()));
         return item;
         }
     }
@@ -57,7 +65,8 @@ public class TauxTaxeSejourAnnuelConverter extends AbstractConverter<TauxTaxeSej
                 dto.setPourcentagePremierMoisRetard(item.getPourcentagePremierMoisRetard());
             if(StringUtil.isNotEmpty(item.getPourcentageAutreMoisRetard()))
                 dto.setPourcentageAutreMoisRetard(item.getPourcentageAutreMoisRetard());
-
+            if(this.employe && item.getEmploye() != null)
+                dto.setEmploye(employeConverter.toDto(item.getEmploye()));
         return dto;
         }
     }
@@ -66,7 +75,29 @@ public class TauxTaxeSejourAnnuelConverter extends AbstractConverter<TauxTaxeSej
 
 
     public void initObject(boolean value) {
+        this.employe = value;
+    }
+
+    public void copy(TauxTaxeSejourAnnuelDto dto, TauxTaxeSejourAnnuel t) {
+        super.copy(dto, t);
+        if (dto.getEmploye() != null)
+            employeConverter.copy(dto.getEmploye(), t.getEmploye());
     }
 
 
+    public EmployeConverter getEmployeConverter() {
+        return employeConverter;
+    }
+
+    public void setEmployeConverter(EmployeConverter employeConverter) {
+        this.employeConverter = employeConverter;
+    }
+
+    public boolean isEmploye() {
+        return employe;
+    }
+
+    public void setEmploye(boolean employe) {
+        this.employe = employe;
+    }
 }

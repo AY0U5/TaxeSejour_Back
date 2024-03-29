@@ -5,6 +5,7 @@ import ma.zs.sejour.bean.core.commun.TypeRedevable;
 import ma.zs.sejour.ws.dto.commun.SecteurDto;
 import ma.zs.sejour.ws.dto.commun.TypeRedevableDto;
 import ma.zs.sejour.zynerator.converter.AbstractConverter;
+import ma.zs.sejour.zynerator.util.StringUtil;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -18,23 +19,35 @@ public class TypeRedevableConverter extends AbstractConverter<TypeRedevable, Typ
 
     @Override
     public TypeRedevable toItem (TypeRedevableDto typeRedevableDto){
+        if (typeRedevableDto == null) {
+            return null;
+        }
         TypeRedevable bean = new TypeRedevable();
-        bean.setId(typeRedevableDto.getId());
-        bean.setCode(typeRedevableDto.getCode());
-        bean.setLibelle(typeRedevableDto.getLibelle());
+        if(StringUtil.isNotEmpty(typeRedevableDto.getId()))
+            bean.setId(typeRedevableDto.getId());
+        if(StringUtil.isNotEmpty(typeRedevableDto.getCode()))
+            bean.setCode(typeRedevableDto.getCode());
+        if(StringUtil.isNotEmpty(typeRedevableDto.getLibelle()))
+            bean.setLibelle(typeRedevableDto.getLibelle());
         return bean;
     }
 
     @Override
     public TypeRedevableDto toDto (TypeRedevable bean){
-        TypeRedevableDto dto = new TypeRedevableDto();
-        dto.setId(bean.getId());
-        dto.setCode(bean.getCode());
-        dto.setLibelle(bean.getLibelle());
-        return dto;
+        if (bean == null) {
+            return null;
+        }else{
+            TypeRedevableDto dto = new TypeRedevableDto();
+            if(StringUtil.isNotEmpty(bean.getId()))
+                dto.setId(bean.getId());
+            if(StringUtil.isNotEmpty(bean.getCode()))
+                dto.setCode(bean.getCode());
+            if(StringUtil.isNotEmpty(bean.getLibelle()))
+                dto.setLibelle(bean.getLibelle());
+            return dto;
+        }
+
     }
 
-    public void initObject(boolean value) {
-    }
 
 }

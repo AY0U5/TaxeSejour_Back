@@ -1,6 +1,7 @@
 package ma.zs.sejour.unit.dao.facade.core.Taxe;
 
 import ma.zs.sejour.bean.core.Taxe.TaxeSejourAnnuel;
+import ma.zs.sejour.bean.core.taux.TauxTaxeSejourAnnuel;
 import ma.zs.sejour.dao.facade.core.Taxe.TaxeSejourAnnuelDao;
 
 import org.junit.jupiter.api.Test;

@@ -7,10 +7,13 @@ import ma.zs.sejour.dao.facade.core.Taxe.TaxeSejourTrimDao;
 import ma.zs.sejour.dao.specification.core.Taxe.TaxeSejourTrimSpecification;
 import ma.zs.sejour.service.facade.admin.Taxe.TaxeSejourTrimAdminService;
 import ma.zs.sejour.zynerator.service.AbstractServiceImpl;
-import ma.zs.sejour.zynerator.util.ListUtil;
+import org.joda.time.YearMonthDay;
 import org.springframework.stereotype.Service;
+
+import java.math.BigDecimal;
+import java.time.MonthDay;
+import java.time.YearMonth;
 import java.util.List;
-import java.util.ArrayList;
 
 
 
